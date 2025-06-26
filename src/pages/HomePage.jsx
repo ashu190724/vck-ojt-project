@@ -4,23 +4,8 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <>
-      {/* Navbar Inline */}
-      <nav className="navbar">
-        <div className="navbar-container">
-          <div className="navbar-logo">Vivekanand College</div>
-          <ul className="navbar-menu">
-            <li><Link to="/" className="navbar-link">Home</Link></li>
-            <li><Link to="/about" className="navbar-link">About</Link></li>
-            <li><Link to="/courses" className="navbar-link">Courses</Link></li>
-            <li><Link to="/contact" className="navbar-link">Contact</Link></li>
-            <li><Link to="/addmission" className="navbar-link navbar-apply">Apply Now</Link></li>
-          </ul>
-        </div>
-      </nav>
-
       {/* Background container */}
-      <div className="home-background" >
-        {/* Page Content */}
+      <div className="home-background">
         <div className="page-container">
           {/* Banner Section */}
           <section style={{ position: "relative", height: "250px", overflow: "hidden", borderRadius: "10px" }}>
@@ -30,6 +15,7 @@ const HomePage = () => {
               style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.7)" }}
             />
             <div
+              className="banner-text"
               style={{
                 position: "absolute",
                 top: "50%",

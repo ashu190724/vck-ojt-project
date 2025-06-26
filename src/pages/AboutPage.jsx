@@ -4,19 +4,7 @@ import { Link } from "react-router-dom";
 const AboutPage = () => {
   return (
     <>
-      {/* Navbar */}
-      <nav className="navbar">
-        <div className="navbar-container">
-          <div className="navbar-logo">Vivekanand College</div>
-          <ul className="navbar-menu">
-            <li><Link to="/" className="navbar-link">Home</Link></li>
-            <li><Link to="/about" className="navbar-link">About</Link></li>
-            <li><Link to="/courses" className="navbar-link">Courses</Link></li>
-            <li><Link to="/contact" className="navbar-link">Contact</Link></li>
-            <li><Link to="/addmission" className="navbar-link navbar-apply">Apply Now</Link></li>
-          </ul>
-        </div>
-      </nav>
+      {/* Removed navbar */}
 
       {/* Page Content with scroll */}
       <div

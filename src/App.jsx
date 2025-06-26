@@ -8,24 +8,22 @@ import ContactPage from "./pages/ContactPage";
 import AddmissionPage from "./pages/AddmissionPage";
 import ChatbotComponent from "./components/Chatbot/ChatbotComponent";
 import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header"; // Assuming Navbar is here
+import Navbar from "./pages/Navbar"; // ✅ import Navbar
 
 const App = () => {
   return (
-    <div className="app-container">
+    <div className="app-wrapper">
       <Router>
-        <Header /> {/* Navbar/Header shown on all pages */}
+        <Navbar /> {/* ✅ show on every page */}
 
-        <main className="page-container">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/home" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/courses" element={<CoursesPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/addmission" element={<AddmissionPage />} />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/addmission" element={<AddmissionPage />} />
+        </Routes>
 
         <ChatbotComponent />
         <Footer />

@@ -1,44 +1,35 @@
-/* src/components/Footer.css */
-.footer {
-  background-color: #002147;
-  color: #ffffff;
-  padding: 20px;
-  width: 100%;
-  flex-shrink: 0;
+.ravi {
+    background-color: black;
+    color: white;
+    height: 40px;
+    display: flex;
+
+    /* justify-content: center; */
+    padding: 10px;
+    bottom: 0;
+    
 }
 
-
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 20px;
-  gap: 20px;
+.aadi {
+    text-align: right;
+    color:white;
+    font-size: 10px;
+    height: 40px;
+   float: right;
+  
 }
+.foot {
+    
+    width: 100%;
 
-.footer-col {
-  flex: 1;
-  min-width: 200px;
+    bottom: 0;
+    position: fixed;
+
+
 }
-
-.footer-col h4 {
-  margin-bottom: 12px;
-  font-size: 18px;
-}
-
-.footer-col a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.footer-col a:hover {
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding: 16px 0;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  font-size: 14px;
+#root {
+    position: relative;
+    min-width: 100%;
+    /* padding-bottom: 60px;*/
+    bottom: 0;
 }

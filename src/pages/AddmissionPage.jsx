@@ -7,20 +7,7 @@ const AddmissionsPage = () => {
     <div id="admissions-page">
       <Header />
 
-      {/* Navbar with styled CSS */}
-      <nav className="navbar">
-        <div className="navbar-container">
-          <div className="navbar-logo">Vivekanand College</div>
-          <ul className="navbar-menu">
-            <li><Link to="/" className="navbar-link">Home</Link></li>
-            <li><Link to="/about" className="navbar-link">About</Link></li>
-            <li><Link to="/courses" className="navbar-link">Courses</Link></li>
-            <li><Link to="/admissions" className="navbar-link">Admissions</Link></li>
-            <li><Link to="/contact" className="navbar-link">Contact</Link></li>
-            <li><Link to="/apply" className="navbar-link navbar-apply">Apply Now</Link></li>
-          </ul>
-        </div>
-      </nav>
+      {/* Removed navbar here */}
 
       <div className="page-container">
         <h1 id="admissions-title">Admissions at Vivekanand College</h1>

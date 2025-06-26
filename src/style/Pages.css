@@ -6,18 +6,12 @@
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #e0f7fa, #80deea);
   color: #02305e;
-  overflow: hidden; /* disable scrolling */
-  display: flex;
-  flex-direction: column;
+  overflow-x: hidden;
 }
-
 
 /* === Navbar === */
 .navbar {
@@ -39,6 +33,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .navbar-logo {
@@ -94,6 +89,9 @@ html, body {
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  position: relative;
+  min-height: 100vh;
 }
 
 /* === Headings & Text === */
@@ -193,6 +191,25 @@ button.secondary-btn:hover {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
 
+/* === Utility Scroll Container === */
+.overflowTest {
+  background: white;
+  padding: 15px;
+  width: 90%;
+  max-height: 500px;
+  overflow: auto;
+  border: 1px solid #ccc;
+}
+
+/* === Hamburger Menu === */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 2000;
+}
+
 /* === Responsive === */
 @media (max-width: 768px) {
   .navbar-container {
@@ -202,14 +219,41 @@ button.secondary-btn:hover {
   }
 
   .navbar-menu {
+    display: none;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    background-color: #ffffff;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 150px;
+    border: 3px solid bisque;
+    border-radius: 10px;
+    z-index: 1500;
+    padding: 15px 10px;
+  }
+
+  .navbar-menu.nav-open {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    margin: 10px 0;
+    list-style: none;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 
   .page-container {
-    margin: 100px 15px 40px 15px;
+    overflow-y: visible;
+    max-height: none;
     padding: 20px 15px;
+    margin-top: 80px;
   }
 
   h1 {
@@ -224,33 +268,58 @@ button.secondary-btn:hover {
   .navbar-logo {
     font-size: 1.3rem;
   }
+
+  #addmission-btn {
+    font-size: 13px;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+  }
+}
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 2000;
 }
 
-/* === Utility Scroll Container === */
-.overflowTest {
-  background: white;
-  padding: 15px;
-  width: 90%;
-  max-height: 500px;
-  overflow: auto;
-  border: 1px solid #ccc;
-}
-.page-container {
-  flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 30px 25px;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  margin: 20px auto;
-  width: 90%;
-  max-width: 1000px;
-}
-.app-container {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+  }
 
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4e4f50;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 150px;
+    border: 3px solid rgb(236, 240, 241);
+    border-radius: 10px;
+    z-index: 1500;
+    padding: 15px 10px;
+  }
+
+  .navbar-menu.nav-open {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    margin: 10px 0;
+    list-style: none;
+  }
+
+  #addmission-btn {
+    font-size: 13px;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+  }
+}
