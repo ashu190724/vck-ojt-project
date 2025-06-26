@@ -112,6 +112,7 @@ const CoursesPage = () => {
             className="video-responsive"
             controls
             src="/videos/college-tour.mp4"
+            width="550px"
           >
             Your browser does not support the video tag.
           </video>

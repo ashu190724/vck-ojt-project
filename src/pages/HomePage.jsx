@@ -19,11 +19,11 @@ const HomePage = () => {
       </nav>
 
       {/* Background container */}
-      <div className="home-background">
+      <div className="home-background" >
         {/* Page Content */}
         <div className="page-container">
           {/* Banner Section */}
-          <section style={{ position: "relative", height: "200px", overflow: "hidden", borderRadius: "10px" }}>
+          <section style={{ position: "relative", height: "250px", overflow: "hidden", borderRadius: "10px" }}>
             <img
               src="/images/collegebanner.png"
               alt="College Banner"
@@ -44,7 +44,7 @@ const HomePage = () => {
               }}
             >
               <h2 style={{ fontSize: "2.8rem", margin: 0 }}>Welcome to Vivekanand College</h2>
-              <p style={{ fontSize: "1.2rem", marginTop: "10px" }}>
+              <p style={{ fontSize: "1.3rem", marginTop: "10px" }}>
                 Your journey to excellence starts here.
               </p>
               <Link to="/addmission">
