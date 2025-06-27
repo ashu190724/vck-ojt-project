@@ -12,7 +12,7 @@ const HomePage = () => {
             <img
               src="/images/collegebanner.png"
               alt="College Banner"
-              style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.7)" }}
+              style={{ width: "100%", height: "100%", objectFit: "fill", filter: "brightness(0.7)"}}
             />
             <div
               className="banner-text"

@@ -8,13 +8,32 @@ import ContactPage from "./pages/ContactPage";
 import AddmissionPage from "./pages/AddmissionPage";
 import ChatbotComponent from "./components/Chatbot/ChatbotComponent";
 import Footer from "./components/Footer/Footer";
-import Navbar from "./pages/Navbar"; // ✅ import Navbar
+import Navbar from "./pages/Navbar"; 
+import DeveloperInfoPopup from "./components/DeveloperInfo/DeveloperInfoPopup";
+import { useState } from "react";
 
 const App = () => {
+  const [showPopup, setShowPopup] = useState(true);
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
   return (
+    <>
+    <div>
+        {/* Your main application content */}
+        <DeveloperInfoPopup
+          show={showPopup}
+          onClose={handleClosePopup}
+          studentName="Ashutosh Narendra Singh"
+          studentPhotoUrl="/images/my.jpg" // Path to their photo
+          uniqueMessage="Learned so much during this OJT! This app showcases my independent coding and deployment skills"
+        />
+      </div>
+
+
     <div className="app-wrapper">
       <Router>
-        <Navbar /> {/* ✅ show on every page */}
+        <Navbar /> {/* show on every page */}
 
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -29,6 +48,7 @@ const App = () => {
         <Footer />
       </Router>
     </div>
+    </>
   );
 };
 

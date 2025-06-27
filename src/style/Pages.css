@@ -150,7 +150,7 @@ button {
 }
 
 button.primary-btn {
-  background-color: #004aad;
+  background-color:#218838;
   color: white;
   padding: 10px 25px;
 }
@@ -270,6 +270,7 @@ button.secondary-btn:hover {
   }
 
   #addmission-btn {
+    background-color:#218838 ;
     font-size: 13px;
     width: 100px;
     height: 40px;
@@ -279,7 +280,7 @@ button.secondary-btn:hover {
 .hamburger {
   display: none;
   font-size: 2rem;
-  color: white;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   z-index: 2000;
 }
@@ -296,7 +297,7 @@ button.secondary-btn:hover {
     display: none;
     flex-direction: column;
     align-items: center;
-    background-color: #4e4f50;
+    background-color: #5278f5;
     position: fixed;
     top: 60px;
     right: 20px;
@@ -317,6 +318,7 @@ button.secondary-btn:hover {
   }
 
   #addmission-btn {
+    background-color:#28a745 ;
     font-size: 13px;
     width: 100px;
     height: 40px;
